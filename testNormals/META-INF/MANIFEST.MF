@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: testNormals;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: DC43
+Export-Package: testNormals,
+ testNormals.impl
+Require-Bundle: de.iils.dc43.core.dependencies,
+ de.iils.dc43.core.geometry.legacy
+Import-Package: javax.annotation
+Bundle-DC43: true
+Automatic-Module-Name: testNormals

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:dc43Utilities="http://www.iils.de/dc43/profile/dc43Utilities/v0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_ApI7wHXlEeqJL7D70vjCuA" name="testNormals">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_A-PpEHXlEeqJL7D70vjCuA">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UTILITY_PROFILE/units.uml#_SiA1IPeDEeaEoaRE-ZlJKw"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_E7h-AHXlEeqJL7D70vjCuA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://GEOMETRY_CLASSES/de.iils.dc43.core.geometry.uml#_KtBHIPbREeezao3MgROMaw"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ApI7wXXlEeqJL7D70vjCuA" name="Classes" visibility="public">
+      <packagedElement xmi:type="uml:Class" xmi:id="_CysCMHXlEeqJL7D70vjCuA" name="Class1">
+        <generalization xmi:type="uml:Generalization" xmi:id="_KLRZUHXlEeqJL7D70vjCuA">
+          <general xmi:type="uml:Class" href="pathmap://GEOMETRY_CLASSES/de.iils.dc43.core.geometry.uml#_NG8OEPbgEeezao3MgROMaw"/>
+        </generalization>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ApI7wnXlEeqJL7D70vjCuA" name="Rules"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ApI7w3XlEeqJL7D70vjCuA" name="Programs">
+      <packagedElement xmi:type="uml:Activity" xmi:id="_ApI7xHXlEeqJL7D70vjCuA" name="RootProgram" node="_ApI7xXXlEeqJL7D70vjCuA _ApI7xnXlEeqJL7D70vjCuA _UFx6oHXlEeqJL7D70vjCuA">
+        <edge xmi:type="uml:ControlFlow" xmi:id="_UIt54HXlEeqJL7D70vjCuA" name="start -> Rule0" target="_UFx6oHXlEeqJL7D70vjCuA" source="_ApI7xXXlEeqJL7D70vjCuA"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_ApI7xXXlEeqJL7D70vjCuA" name="start" outgoing="_UIt54HXlEeqJL7D70vjCuA"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_ApI7xnXlEeqJL7D70vjCuA" name="final"/>
+        <node xmi:type="uml:OpaqueAction" xmi:id="_UFx6oHXlEeqJL7D70vjCuA" name="Rule0" incoming="_UIt54HXlEeqJL7D70vjCuA"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UGcB8HXlEeqJL7D70vjCuA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UGeeMHXlEeqJL7D70vjCuA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.iils.de/dc43/profile/dc43Utilities/v0#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://UTILITY_PROFILE/dc43Utilities.profile.uml#_U1HE8Fy0Ed6NvKf1SxOu9A"/>
+      </profileApplication>
+    </packagedElement>
+  </uml:Model>
+  <dc43Utilities:javaRule xmi:id="_UHd8sHXlEeqJL7D70vjCuA" rule="Rule0" base_OpaqueAction="_UFx6oHXlEeqJL7D70vjCuA"/>
+</xmi:XMI>
