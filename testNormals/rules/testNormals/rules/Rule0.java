@@ -24,8 +24,8 @@ public class Rule0 extends JavaRule {
 	@Override
 	public void execute() throws Exception {
 		Class1 class1 = Class1.create();
-		class1.setX(5.0);
-		class1.setY(5.0);
+		class1.setX(1.0);
+		class1.setY(1.0);
 		class1.setZ(0.0);
 		
 		Class1 class2 = Class1.create();
@@ -58,27 +58,46 @@ public class Rule0 extends JavaRule {
 		Vector3D vec3 = new Vector3D(class3.getX().getValue(), class3.getY().getValue(), class3.getZ().getValue());
 		
 		Vector3D vec12 = vec1.subtract(vec2);
-		Vector3D vec23 = vec3.subtract(vec2);
+		Vector3D vec32 = vec3.subtract(vec2);
 		
-		Vector3D vec_res = vec12.add(vec23);
-		vec_res = vec_res.normalize();
+		Vector3D vec_res2 = vec12.add(vec32);
+		vec_res2 = vec_res2.normalize();
 		
-		Line vis = Line.create();
+		Line vis2 = Line.create();
 		
-		vis.setStartPoint(class2);
-		Class1 c4 = Class1.create();
+		vis2.setStartPoint(class2);
+		Class1 c2 = Class1.create();
 		
-		c4.setX(class2.getX().getValue() + vec_res.getX());
-		c4.setY(class2.getY().getValue() + vec_res.getY());
-		c4.setZ(class2.getZ().getValue() + vec_res.getZ());
+		c2.setX(class2.getX().getValue() + vec_res2.getX());
+		c2.setY(class2.getY().getValue() + vec_res2.getY());
+		c2.setZ(class2.getZ().getValue() + vec_res2.getZ());
 
-		vis.setEndPoint(c4);
+		vis2.setEndPoint(c2);
 		
 		G g2 = G.create();
-		g2.getGeometric().add(vis);
+		g2.getGeometric().add(vis2);
 		Component.create().setShape(g2);	
 		
+		Vector3D vec23 = vec2.subtract(vec3);
+		Vector3D vec13 = vec1.subtract(vec3);
 		
+		Vector3D vec_res3 = vec23.add(vec13);
+		vec_res3 = vec_res3.normalize();
+		
+		Line vis3 = Line.create();
+		
+		vis3.setStartPoint(class2);
+		Class1 c3 = Class1.create();
+		
+		c3.setX(class2.getX().getValue() + vec_res3.getX());
+		c3.setY(class2.getY().getValue() + vec_res3.getY());
+		c3.setZ(class2.getZ().getValue() + vec_res3.getZ());
+
+		vis3.setEndPoint(c3);
+		
+		G g3 = G.create();
+		g3.getGeometric().add(vis3);
+		Component.create().setShape(g3);
 	
 
 	}
